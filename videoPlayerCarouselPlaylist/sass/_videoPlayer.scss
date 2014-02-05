@@ -1,0 +1,171 @@
+// compass imports
+@import "compass/css3";
+
+// global variables
+$font-family: arial;
+
+// playlist menu variables
+$playlist-menu-bgcolor: #274b6b;
+$playlist-button-bgcolor: #ececec;
+
+// playlist variables
+$thumbnail-image-height: 100px;
+$thumbnail-image-width: 175px;
+$video-title-bgcolor: rgba(0, 0, 0, .65);
+
+
+.section{
+  border: 1px solid #dedede;
+  height: 500px;
+  margin: 0 auto;
+  padding:10px;
+  width: 620px;
+}
+
+#playlist_player {
+  width: 640px;
+}
+
+.playlist-item {
+  float: left;
+  font-size: x-small;
+  cursor: pointer;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+  width: 175px !important;
+
+
+  img{
+    clear:left;
+    float:left;
+    height: $thumbnail-image-height;
+    width: $thumbnail-image-width;
+  }
+
+  h6{
+    color: #000;
+    display: inline-block;
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    padding:5px;
+    position: relative;
+    width: 175px;
+  }
+
+  p{
+    font-family: $font-family;
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+.playlist-item-selected {
+  color: #F5F5F5;
+}
+
+.active{
+  color:#fff;
+  position: absolute;
+  bottom: 30px;
+  height: 20px;
+  background: #274c6b;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-size: 11px !important;
+}
+
+
+.duration{
+  background:#000;
+  color:#fff;
+  display: inline-block;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  padding:2px;
+  position: absolute;
+  right: 0;
+}
+
+.playlist-btn {
+  background: $playlist-button-bgcolor;
+  border-top: 1px solid #dedede;
+  color: rgba(0,0,0,1);
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 46px;
+  margin: 0;
+  padding: 0 10px;
+  width: 298px;
+
+  &:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */  
+  }
+
+  &:hover{
+    background: #333;
+    color: #fff;  
+  }
+
+  p{
+    display: inline-block;
+    margin: 0;
+    padding: 0 5px 0 32px;
+    vertical-align: middle;
+    text-transform: uppercase;  
+  }
+}
+
+.playlist-btn-selected {
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: small;
+  color: rgba(245,245,245,1);
+  border: 1px solid rgba(154,154,154,1);
+  background-color: #575758;
+  display: block;
+  width: 298px;
+}
+
+ul#BCL_playlistSelector{
+  display: none;
+
+  
+}
+
+#BCL_playlistSelectorDropDown {
+  background: white;
+  border-bottom: 1px solid #dedede;
+  border-top: 0;
+  display: none;
+  font-family: $font-family;
+  margin: 0px;
+  padding: 0;
+  position: absolute;
+  width: 298px;
+  z-index: 1;
+}
+
+
+
+#BCL_playlist {
+  border-top: 0;
+  float: left;
+  height: 132px !important;
+  margin-top: 5px;
+  width: 596px;
+  overflow-y: scroll;
+}
