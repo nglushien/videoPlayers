@@ -1,0 +1,236 @@
+// compass imports
+@import "compass/css3";
+
+// global variables
+$font-family: arial;
+
+// playlist menu variables
+$playlist-menu-bgcolor: #274b6b;
+$playlist-button-bgcolor: #ececec;
+
+// playlist variables
+$thumbnail-image-height: 68px;
+$thumbnail-image-width: 123px;
+$video-title-bgcolor: rgba(0, 0, 0, .65);
+
+
+.section{
+  border: 1px solid #dedede;
+  height: 370px;
+  margin: 0 auto;
+  width: 940px;
+}
+
+#playlist_player {
+  float: left;
+  width: 640px;
+}
+
+.playlist-item {
+  cursor: pointer;
+  float: left;
+  font-size: x-small;
+  height: 112px;
+  margin: 0 5px 25px;
+  overflow: hidden;
+  position: relative;  
+  width: 123px;
+
+  img{
+    clear:left;
+    float:left;
+    height: $thumbnail-image-height;
+    width: $thumbnail-image-width;
+  }
+
+  h6{
+    color: #000;
+    display: inline-block;
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 7px 0 0;
+    position: relative;
+    width: $thumbnail-image-width;
+  }
+
+  p{
+    font-family: $font-family;
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+.playlist-item-selected {
+  cursor: pointer;
+  float: left;
+  font-size: x-small;
+  height: 112px;
+  margin: 0 5px 25px;
+  overflow: hidden;
+  position: relative;  
+  width: 123px;
+
+  img{
+    clear:left;
+    float:left;
+    height: $thumbnail-image-height;
+    width: $thumbnail-image-width;
+  }
+
+  h6{
+    color: #000;
+    display: inline-block;
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 7px 0 0;
+    position: relative;
+    width: $thumbnail-image-width;
+  }
+
+  p{
+    font-family: $font-family;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .playing{
+    background: #274c6b;
+    color: #fff;;
+    font-size: 10px;
+    padding:3px;
+    position:absolute;
+    text-align: center;
+    top: 53px;
+    width: $thumbnail-image-width;
+  }
+}
+
+
+.duration{
+  background:#000;
+  color:#fff;
+  display: inline-block;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  padding:2px;
+  position: absolute;
+  right: 0;
+}
+
+.playlist-btn {
+  background: $playlist-button-bgcolor;
+  border-top: 1px solid #dedede;
+  color: rgba(0,0,0,1);
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 46px;
+  margin: 0;
+  padding: 0 10px;
+  width: 298px;
+
+  &:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */  
+  }
+
+  &:hover{
+    background: #333;
+    color: #fff;  
+  }
+
+  p{
+    display: inline-block;
+    margin: 0;
+    padding: 0 5px 0 32px;
+    vertical-align: middle;
+    text-transform: uppercase;  
+  }
+}
+
+.playlist-btn-selected {
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: small;
+  color: rgba(245,245,245,1);
+  border: 1px solid rgba(154,154,154,1);
+  background-color: #575758;
+  display: block;
+  width: 298px;
+}
+
+ul#BCL_playlistSelector{
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding:0;
+  width: 298px;
+
+  >li{
+    background: $playlist-menu-bgcolor;
+    color: #fff;
+    cursor:pointer;
+    line-height: 0;
+    padding:7px 0; 
+
+    p{
+      display: inline-block;
+      font-family: $font-family;
+      font-size: 12px;
+      line-height: 1;
+      margin: 0;
+      padding:0;
+      text-transform: uppercase;
+      vertical-align: middle;
+      width: 85%;
+
+      -webkit-margin-before:0;
+      -webkit-margin-after:0;
+    }
+
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  img{
+    margin:0 8px;
+    vertical-align: middle;  
+  }
+}
+
+#BCL_playlistSelectorDropDown {
+  background: white;
+  border-bottom: 1px solid #dedede;
+  border-top: 0;
+  display: none;
+  font-family: $font-family;
+  margin: 0px;
+  padding: 0;
+  position: absolute;
+  width: 298px;
+  z-index: 1;
+}
+
+
+
+#BCL_playlist {
+  border-top: 0;
+  float: left;
+  height: 337px;
+  padding:20px 13px 10px;
+  width: 298px;
+  overflow-y: scroll;
+}

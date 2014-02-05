@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <div id="micrositeContainer">
+      <div id="micrositeContainerInner">
+        <div id="micrositeContainerCompress">
+          <div id="micrositeContent">
+            <div id="micrositeContentColumnFull">
+              <h2>Video Player Redesign</h2>
+              <!-- Start Video Player -->
+              <div class="section" id="player">
+                
+                <div id="playlist_player" class="player-block">
+                  <!-- Start of Brightcove Player -->
+                  <script language="JavaScript" type="text/javascript" src="//admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+                  <object id="myExperience" class="BrightcoveExperience">
+                    <param name="bgcolor" value="#FFFFFF" />
+                    <param name="width" value="640" />
+                    <param name="height" value="368" />
+                    <param name="playerID" value="3033432477001" />
+                    <param name="playerKey" value="AQ~~,AAAAAGL7FTI~,KqbVcw7NDYp9n_5woJn_PUpAHj9QWIpr" />
+                    <param name="isVid" value="true" />
+                    <param name="isUI" value="true" />
+                    <param name="dynamicStreaming" value="true" />
+                    <param name="includeAPI" value="true" />
+                    <param name="templateLoadHandler" value="BCLS.onTemplateLoad" />
+                    <param name="templateReadyHandler" value="BCLS.onTemplateReady" />
+                  </object>
+                  <script type="text/javascript">brightcove.createExperiences();</script>
+                  <!-- End of Brightcove Player -->
+                </div>
+                <ul id="BCL_playlistSelector">
+                  <li>
+                    <img src="images/menuIcon.png" />
+                    <p></p>
+                  </li>
+                  <ul id="BCL_playlistSelectorDropDown">
+                  </ul>
+                </ul>
+                <div id="BCL_playlist"></div>
+              </div>
+              <!-- End Video Player -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
