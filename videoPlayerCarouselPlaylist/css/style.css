@@ -938,6 +938,7 @@ ul#BCL_playlistSelector {
 
 .bx-wrapper .bx-controls-direction a.bx-prev.disabled {
   background: url(../images/prevDisabled.png) no-repeat 0 0;
+  cursor: default;
   height: 100px;
   left: 0;
   width: 20px;
@@ -945,6 +946,7 @@ ul#BCL_playlistSelector {
 
 .bx-wrapper .bx-controls-direction a.bx-next.disabled {
   background: url(../images/nextDisabled.png) no-repeat 0 0;
+  cursor: default;
   height: 100px;
   right: 0;
   width: 20px;
