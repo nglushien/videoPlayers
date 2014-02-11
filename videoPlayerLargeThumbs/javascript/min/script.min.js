@@ -207,6 +207,22 @@
 
         };
 
+        resizePlayer = function(ex){
+          
+
+            $(window).on('resize', function (){
+              if($(window).width() <= 940){
+                ex.setSize($('.resizer').width(), $('.resizer').height());
+              } else if($(window).width() >= 940){
+                ex.setSize($('#playlist_player').width(), $('#playlist_player').height());
+              }
+
+            });
+
+          };
+            
+
+
         // public functions
         return {
           /**** template loaded event handler ****/
@@ -214,6 +230,13 @@
             // get a reference to the player and API Modules and Events
             player = brightcove.api.getExperience(experienceID);
             APIModules = brightcove.api.modules.APIModules;
+            ex = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
+
+            ex.addEventListener(brightcove.api.events.ExperienceEvent.TEMPLATE_READY, function (evt)
+            {
+              brightcovePlayerReady(ex);
+            });
+
           },
           /**** template ready event handler ****/
           onTemplateReady : function (evt) {
@@ -224,18 +247,27 @@
             // fetch the playlists
             buildPlaylistsData(0);
 
+            resizePlayer(ex);
+
           }
         };
       }());
 
- $(document).on('ready',function(){
+$(document).ready(function(){
 
-  
+  $(window).resize(function() {
+    clearTimeout(this.id);
+    this.id = setTimeout(doneResizing, 500);
+  });
 
+  function doneResizing(){
 
+    if($(window).width() <= 950){
 
+      $('#player').addClass('resizer');
 
+    }
 
+  }
 
-
- });
+});
