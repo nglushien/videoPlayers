@@ -11,7 +11,6 @@
             playlists = playlistIDs,
             numberPlayerlists = playlists.length,
             // Handlebars templates for the playlist selector and playlist
-            selectorTemplate = "{{#playlistsData}}<li class=\"playlist-btn\" data-index=\"{{returnArrayIndex}}\"><p>{{displayName}}</p></li>{{/playlistsData}}",
             playlistTemplate = "{{#videos}}<li class=\"playlist-item\" data-id=\"{{id}}\"><p class=\"duration\">{{length}}</p><img height=\"40\" width=\"72\" src=\"{{thumbnailURL}}\"/><h6>{{displayName}}</h6></li>{{/videos}}",
               template,
               data,
@@ -96,44 +95,10 @@
           });
         };
 
-        /**** function that builds the playlist selector ****/
+        /**** function that builds the playlist ****/
         buildPlaylistSelector = function() {
-          // populate the template with data
-          template = Handlebars.compile(selectorTemplate);
-          data = obj;
-          results = template(data);
-          $("#BCL_playlistSelectorDropDown").html(results);
 
-          /****
-          * listener for playlist selection - builds the playlist
-          * using jquery here as it simplifies highlighting the selected tab
-          ****/
-          $("#BCL_playlistSelectorDropDown li").on("click", function(evt) {
-            $this = $(this);
-
-            // highlight the current tab
-            $this.siblings().removeClass("playlist-btn-selected").addClass("playlist-btn");
-            $this.removeClass("playlist-btn").addClass("playlist-btn-selected");
-            $('#BCL_playlistSelector>li p').text($('.playlist-btn-selected').text());
-
-            if($('#BCL_playlistSelector>li p').text() === $('.playlist-btn-selected').text()){
-              $('.playlist-btn-selected').css('display','none');
-              $('.playlist-btn').css('display','block');
-            } else {
-              $('.playlist-btn').css('display','block');
-            }
-
-            var componentHeight = $('.section').outerHeight(true);
-            var playlistMenuHeight = $('#BCL_playlistSelector').outerHeight(true);
-            var playlistHeight = componentHeight - playlistMenuHeight - 2;
-
-            $('#BCL_playlist').outerHeight(playlistHeight);
-
-            // build the new playlist
-            buildPlaylist($this.attr("data-index"));
-          });
-
-          $("#BCL_playlistSelectorDropDown li").filter(":first").trigger("click");
+          buildPlaylist(0);
 
         };
 

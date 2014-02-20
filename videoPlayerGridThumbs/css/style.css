@@ -803,7 +803,7 @@ a:focus {
   /* Adjusts for spacing */
 }
 .playlist-btn:hover {
-  background: #333;
+  background: #556b7f;
   color: #fff;
 }
 .playlist-btn p {
