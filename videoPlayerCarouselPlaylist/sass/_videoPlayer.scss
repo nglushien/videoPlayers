@@ -10,14 +10,15 @@ $playlist-button-bgcolor: #ececec;
 
 // playlist variables
 $thumbnail-image-height: 100px;
-$thumbnail-image-width: 175px;
+$thumbnail-image-width: 178px;
 $video-title-bgcolor: rgba(0, 0, 0, .65);
 
 
 .section{
   border: 1px solid #dedede;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
+  overflow: hidden;
   padding:10px;
   width: 620px;
 }
@@ -33,7 +34,7 @@ $video-title-bgcolor: rgba(0, 0, 0, .65);
   height: 130px;
   overflow: hidden;
   position: relative;
-  width: 175px !important;
+  width: 178px !important;
 
 
   img{

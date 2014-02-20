@@ -684,8 +684,9 @@ a:focus {
 
 .section {
   border: 1px solid #dedede;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
+  overflow: hidden;
   padding: 10px;
   width: 620px;
 }
@@ -701,13 +702,13 @@ a:focus {
   height: 130px;
   overflow: hidden;
   position: relative;
-  width: 175px !important;
+  width: 178px !important;
 }
 .playlist-item img {
   clear: left;
   float: left;
   height: 100px;
-  width: 175px;
+  width: 178px;
 }
 .playlist-item h6 {
   color: #000;
