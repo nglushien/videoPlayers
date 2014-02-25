@@ -635,7 +635,9 @@ a:focus {
 }
 
 #micrositeContainerCompress {
+  height: auto;
   margin: 0 auto;
+  overflow: hidden;
   width: 980px;
   background-color: #fff;
 }
@@ -689,8 +691,13 @@ a:focus {
   width: 940px;
 }
 
+.BrightcoveExperience {
+  position: absolute;
+}
+
 #playlist_player {
   float: left;
+  height: 368px;
   width: 640px;
 }
 
@@ -844,15 +851,16 @@ ul#BCL_playlistSelector img {
 #BCL_playlist {
   border-top: 0;
   float: left;
-  height: 337px;
+  height: 330px !important;
   padding: 10px 0;
   width: 298px;
   overflow-y: scroll;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 940px) {
+@media only screen and (min-width: 320px) and (max-width: 960px) {
   #micrositeContainerCompress {
-    width: 100%;
+    margin: 0 auto;
+    width: 96%;
   }
 
   #micrositeContentColumnFull {
@@ -866,13 +874,29 @@ ul#BCL_playlistSelector img {
     float: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    height: auto !important;
+    height: 100% !important;
     width: 100% !important;
+  }
+
+  ul#BCL_playlistSelector {
+    float: none !important;
+    position: absolute !important;
+    width: 100% !important;
+  }
+  ul#BCL_playlistSelector > li {
+    padding: 14px 0 !important;
+  }
+
+  #BCL_playlistSelectorDropDown {
+    width: 100%;
+  }
+  #BCL_playlistSelectorDropDown .playlist-btn {
+    width: 100%;
   }
 
   #playlist_player {
     float: none;
-    padding-bottom: 56.25%;
+    padding-bottom: 62%;
     position: relative;
     height: 100%;
     margin: 0 auto;
@@ -890,8 +914,57 @@ ul#BCL_playlistSelector img {
   }
 
   object, embed {
+    height: 100%;
     max-height: 100%;
     max-width: 100%;
     width: 100%;
+  }
+
+  #BCL_playlist {
+    height: 100% !important;
+    margin-top: 35px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .item-container {
+    max-height: 142px;
+  }
+
+  .playlist-item {
+    border: 1px solid #e1e1e1 !important;
+    display: table;
+    float: none !important;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+  }
+  .playlist-item img {
+    height: auto  !important;
+    max-height: 142px !important;
+    width: 99% !important;
+  }
+  .playlist-item h6 {
+    background: none !important;
+    color: #444 !important;
+    display: table-cell !important;
+    font-size: 18px !important;
+    line-height: 1.5em;
+    position: initial !important;
+    vertical-align: middle !important;
+    width: 71% !important;
+  }
+  .playlist-item .time {
+    display: block;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  .playlist-item h6 {
+    font-size: 12px !important;
+    line-height: 1em !important;
+  }
+  .playlist-item .time {
+    font-size: 12px !important;
   }
 }

@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0 0 10px; font-weight: bold; line-height: 1.1; 
 a { color: #2ba6cb; text-decoration: none; }
 a:hover { color: #2795b6; }
 a:focus { outline: none; color: #2ba6cb; }
-#micrositeContainerCompress { margin: 0 auto; width: 980px; background-color: #fff; }
+#micrositeContainerCompress { height:auto; margin: 0 auto; overflow:hidden; width: 980px; background-color: #fff; }
 #micrositeHeader,
 #micrositeFooter,
 #micrositeContentColumnLeft,

@@ -1,7 +1,8 @@
-@media only screen and (min-width: 320px) and (max-width:940px){
+@media only screen and (min-width: 320px) and (max-width:960px){
 
   #micrositeContainerCompress{
-    width: 100%;
+    margin:0 auto;
+    width: 96%;
   }
 
   #micrositeContentColumnFull{
@@ -15,14 +16,31 @@
     float: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    height: auto !important;
+    height: 100% !important;
     width: 100% !important;
   }
 
+  ul#BCL_playlistSelector{
+    float: none !important;
+    position:absolute !important;
+    width: 100% !important;
+
+    > li{
+      padding: 14px 0 !important;
+    }
+  }
+
+  #BCL_playlistSelectorDropDown{
+    width: 100%;
+
+    .playlist-btn{
+      width: 100%;
+    }
+  }
 
   #playlist_player{
     float: none ;
-    padding-bottom:56.25% ;
+    padding-bottom:62% ;
     position: relative ;
     height: 100% ;
     margin:0 auto; 
@@ -40,9 +58,68 @@
   }
 
   object, embed{
+    height: 100%;
     max-height: 100%;
     max-width: 100%;
     width: 100%;
+  }
+
+  #BCL_playlist{
+    height: 100% !important;
+    margin-top: 35px;
+    padding:10px;
+    width: 100%;
+  }
+
+  .item-container{
+    max-height: 142px;
+  }
+
+  .playlist-item{
+    border:1px solid #e1e1e1 !important;
+    display: table;
+    float: none !important;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+
+    img{
+      height: auto  !important;
+      max-height: 142px !important; 
+      width: 99% !important;
+    }
+
+    h6{
+      background:none !important;
+      color:#444 !important;
+      display: table-cell !important;
+      font-size: 18px !important;
+      line-height: 1.5em;
+      position:initial !important;
+      vertical-align: middle !important;
+      width: 71% !important;
+    }
+
+    .time{
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 320px) and (max-width:640px){
+
+  .playlist-item{
+    h6{
+      font-size: 12px !important;
+      line-height: 1em !important;
+    }
+
+    .time{
+      font-size: 12px !important;
+    }
   }
 
 }

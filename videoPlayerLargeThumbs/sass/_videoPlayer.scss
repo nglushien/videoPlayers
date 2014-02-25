@@ -21,8 +21,13 @@ $video-title-bgcolor: rgba(0, 0, 0, .65);
   width: 940px;
 }
 
+.BrightcoveExperience {
+   position: absolute;
+  }
+
 #playlist_player {
   float: left;
+  height: 368px;
   width: 640px;
 }
 
@@ -190,7 +195,7 @@ ul#BCL_playlistSelector{
 #BCL_playlist {
   border-top: 0;
   float: left;
-  height: 337px;
+  height: 330px !important;
   padding:10px 0;
   width: 298px;
   overflow-y: scroll;
