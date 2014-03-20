@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <div id="micrositeContainer">
+      <div id="micrositeContainerInner">
+        <div id="micrositeContainerCompress">
+          <div id="micrositeContent">
+            <div id="micrositeContentColumnFull">
+              <h2>Video Player - Large Thumbnails</h2>
+              <!-- Start Video Player -->
+              <div class="section resizer" id="player">
+                <a id="close">Close</a>
+                <a id="expand">Expand</a>
+                <div class="thumb">
+                  <img class="videoThumb" />
+                  <p class="videoDuration"></p>
+                  <p class="videoTitle"></p>
+                </div>
+                <div id="playlist_player" class="player-block">
+                  <!-- Start of Brightcove Player -->
+                  <script language="JavaScript" type="text/javascript" src="//admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+                  <object id="myExperience3331442257001" class="BrightcoveExperience">
+                    <param name="forceHTML" value="true" />
+                    <param name="bgcolor" value="#FFFFFF" />
+                    <param name="playerID" value="3033432477001" />
+                    <param name="playerKey" value="AQ~~,AAAAAGL7FTI~,KqbVcw7NDYp9n_5woJn_PUpAHj9QWIpr" />
+                    <param name="isVid" value="true" />
+                    <param name="isUI" value="true" />
+                    <param name="dynamicStreaming" value="true" />
+                    <param name="includeAPI" value="true" />
+                    <param name="@videoPlayer" value="3331442257001" />
+                    <param name="templateLoadHandler" value="onTemplateLoad" />
+                    <param name="templateReadyHandler" value="onTemplateReady" />
+                  </object>
+                  <script type="text/javascript">brightcove.createExperiences();</script>
+                  <!-- End of Brightcove Player -->
+                </div>
+                
+              </div>
+              <div id="rightContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ultrices erat. Curabitur mi eros, pretium elementum urna nec, mattis condimentum mi. Suspendisse potenti. Aenean fermentum accumsan pulvinar. </p>
+              </div>
+              <!-- End Video Player -->
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ultrices erat. Curabitur mi eros, pretium elementum urna nec, mattis condimentum mi. Suspendisse potenti. Aenean fermentum accumsan pulvinar. Donec posuere tortor nec turpis varius elementum. In porttitor placerat metus, sed consectetur tortor euismod at. Ut scelerisque lacus ac felis commodo gravida. Vivamus ac hendrerit sapien, et pharetra augue. Suspendisse laoreet pharetra lectus, ac tincidunt velit ullamcorper at. Duis eget sem non nulla gravida lacinia.</p>
+
+              <p class="text">Aliquam tempus, mauris quis congue consectetur, ipsum nulla ornare ligula, vel vulputate magna ipsum quis sapien. Vivamus tristique risus tortor, ut eleifend felis faucibus at. Donec laoreet risus arcu, vel adipiscing arcu tincidunt ut. Ut et viverra turpis. Fusce et mattis orci. Etiam nec augue eros. Suspendisse potenti. Curabitur in gravida quam. Donec hendrerit eros mi, vel eleifend felis tincidunt euismod. Aenean ut sem non magna adipiscing vulputate. Sed id est nec risus suscipit semper at in ligula. Praesent ut aliquet neque, volutpat tincidunt nibh.</p>
+
+              <p class="text">Aliquam tempus, mauris quis congue consectetur, ipsum nulla ornare ligula, vel vulputate magna ipsum quis sapien. Vivamus tristique risus tortor, ut eleifend felis faucibus at. Donec laoreet risus arcu, vel adipiscing arcu tincidunt ut. Ut et viverra turpis. Fusce et mattis orci. Etiam nec augue eros. Suspendisse potenti. Curabitur in gravida quam. Donec hendrerit eros mi, vel eleifend felis tincidunt euismod. Aenean ut sem non magna adipiscing vulputate. Sed id est nec risus suscipit semper at in ligula. Praesent ut aliquet neque, volutpat tincidunt nibh.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
