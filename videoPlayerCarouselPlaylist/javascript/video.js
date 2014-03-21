@@ -11,7 +11,7 @@
             playlists = playlistIDs,
             numberPlayerlists = playlists.length,
             // Handlebars templates for the playlist selector and playlist
-            playlistTemplate = "{{#videos}}<li class=\"playlist-item\" data-id=\"{{id}}\"><p class=\"duration\">{{length}}</p><img height=\"40\" width=\"72\" src=\"{{thumbnailURL}}\"/><h6>{{displayName}}</h6></li>{{/videos}}",
+            playlistTemplate = "{{#videos}}<li class=\"playlist-item\" data-id=\"{{id}}\"><p class=\"duration\">{{length}}</p><img height=\"40\" width=\"72\" src=\"{{videoStillURL}}\"/><h6>{{displayName}}</h6></li>{{/videos}}",
               template,
               data,
               results,

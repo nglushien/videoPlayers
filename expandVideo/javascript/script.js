@@ -7,7 +7,7 @@ resizePlayer = function(ex){
   $('.thumb').on('click', function (){
       if($('#playlist_player iframe').length >= 1){
         $('.thumb').fadeOut();
-        ex.setSize(564, 350);
+        ex.setSize(850, 495);
         $('.resizer').animate({
           width:'564px',
           height:'350px'
@@ -21,7 +21,7 @@ var h5small = function(ex){
 };
 
 var h5large = function(ex){
-  ex.setSize(564, 350);
+  ex.setSize(860, 495);
 };
 
 var onTemplateLoad = function(experienceID){
@@ -95,13 +95,13 @@ var videoExpand = function(){
       top:['0','swing']
     },500);
     setTimeout(function(){
-      $('.BrightcoveExperience').width(564).height(350);
+      $('.BrightcoveExperience').width(860).height(495);
       h5large(ex);
       resizePlayer();
       $('.resizer').css('overflow','visible');
       $('.resizer').animate({
-          width:'564px',
-          height:'350px'
+          width:'860px',
+          height:'495px'
         },1000);
       setTimeout(function(){
         $('#close').css('display','block').animate({
@@ -111,13 +111,13 @@ var videoExpand = function(){
       },1500);
     },500);
   } else {
-    $('.BrightcoveExperience').width(564).height(350);
+    $('.BrightcoveExperience').width(860).height(495);
     h5large(ex);
     resizePlayer();
     $('.resizer').css('overflow','visible');
     $('.resizer').animate({
-        width:'564px',
-        height:'350px'
+        width:'860px',
+        height:'495px'
       },1000);
     setTimeout(function(){
       $('#close').css('display','block').animate({

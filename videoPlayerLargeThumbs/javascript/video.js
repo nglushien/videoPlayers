@@ -12,7 +12,7 @@
             numberPlayerlists = playlists.length,
             // Handlebars templates for the playlist selector and playlist
             selectorTemplate = "{{#playlistsData}}<li class=\"playlist-btn\" data-index=\"{{returnArrayIndex}}\"><p>{{displayName}}</p></li>{{/playlistsData}}",
-            playlistTemplate = "{{#videos}}<div class=\"playlist-item\" data-id=\"{{id}}\"><img height=\"40\" width=\"72\" src=\"{{thumbnailURL}}\"/><h6>{{displayName}}</h6><p class=\"duration\">{{length}}</p></div>{{/videos}}",
+            playlistTemplate = "{{#videos}}<div class=\"playlist-item\" data-id=\"{{id}}\"><img height=\"40\" width=\"72\" src=\"{{videoStillURL}}\"/><h6>{{displayName}}</h6><p class=\"duration\">{{length}}</p></div>{{/videos}}",
               template,
               data,
               results,
@@ -279,6 +279,32 @@
             buildPlaylistsData(0);
 
             resizePlayer(ex);
+
+          },
+          onTemplateError : function (event) {
+
+            var i = 0;
+            var videoWorks = false;
+            var y = setInterval(function() {checkIfVideoWorks();},1000);
+
+            function checkIfVideoWorks() {
+              if (i > 1) {
+                clearInterval(y);
+              } else if ($(".playlist-item").length >= 1) {
+                clearInterval(y);
+                videoWorks = true;
+                //perform your actions here
+              } else {
+                if(event.code === brightcove.errorCodes.NO_CONTENT){
+                  $('#BCL_playlist').html('<div id="errorMessage"><h3>There are no videos to load at this time. Please check back soon. We apologize for any inconvenience.</h3></div>');
+                  $('#loader').css('display','none');
+                } else if (event.code !== brightcove.errorCodes.NO_CONTENT){
+                  $('#BCL_playlist').html('<div id="errorMessage"><h3>Brightcove is experiencing some technical difficulties. Please check back soon. We apologize for any inconvenience.</h3></div>');
+                  $('#loader').css('display','none');
+                }
+              }
+                i++;
+              }
 
           }
         };

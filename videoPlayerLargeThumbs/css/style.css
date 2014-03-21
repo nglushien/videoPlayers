@@ -684,6 +684,28 @@ a:focus {
   width: 940px;
 }
 
+#errorMessage {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+#errorMessage h3 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+#errorMessage2 {
+  display: none;
+  margin: 0 auto;
+  width: 90%;
+}
+#errorMessage2 h3 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
 .section {
   border: 1px solid #dedede;
   height: 370px;
@@ -855,6 +877,13 @@ ul#BCL_playlistSelector img {
   padding: 10px 0;
   width: 298px;
   overflow-y: scroll;
+}
+#BCL_playlist #loader p {
+  text-align: center;
+}
+#BCL_playlist #loader img {
+  display: block;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 960px) {

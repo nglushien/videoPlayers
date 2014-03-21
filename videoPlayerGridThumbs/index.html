@@ -18,14 +18,14 @@
               <h2>Video Player - Playlist Grid</h2>
               <!-- Start Video Player -->
               <div class="section" id="player">
-                
                 <div id="playlist_player" class="player-block">
                   <!-- Start of Brightcove Player -->
                   <script>
-                    var playlistIDs = [1488462305001,1507762150001,1644580625001,1644580612001];
+                   var playlistIDs = [1488462305001,1094120170001,1113254749001];
                   </script>
                   <script language="JavaScript" type="text/javascript" src="//admin.brightcove.com/js/BrightcoveExperiences.js"></script>
                   <object id="myExperience" class="BrightcoveExperience">
+                    <!-- <param name="forceHTML" value="true" /> -->
                     <param name="bgcolor" value="#FFFFFF" />
                     <param name="width" value="640" />
                     <param name="height" value="368" />
@@ -37,6 +37,7 @@
                     <param name="includeAPI" value="true" />
                     <param name="templateLoadHandler" value="BCLS.onTemplateLoad" />
                     <param name="templateReadyHandler" value="BCLS.onTemplateReady" />
+                    <param name="templateErrorHandler" value="BCLS.onTemplateError" />
                   </object>
                   <script type="text/javascript">brightcove.createExperiences();</script>
                   <script type="text/javascript" src="javascript/video.js"></script>
@@ -50,7 +51,12 @@
                   <ul id="BCL_playlistSelectorDropDown">
                   </ul>
                 </ul>
-                <div id="BCL_playlist"></div>
+                <div id="BCL_playlist">
+                  <div id="loader">
+                    <p>The playlist is loading</p>
+                    <img src="images/loader.gif" />
+                  </div>
+                </div>
               </div>
               <!-- End Video Player -->
             </div>
