@@ -1,0 +1,851 @@
+#heroPlayerComponent{
+  margin:0 auto;
+  position: relative;
+  width: $heroPlayerWidth;
+}
+
+#imageOverlay {
+  background: $heroImageBkg;
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+  height:$heroImageHeight;
+  margin:0 auto;
+  position: relative;
+  visibility: hidden;
+  width: $heroImageWidth;
+  #overlay {
+    background: $overlayBkgColor;
+    left:$overlayLeftPosition;
+    padding:$overlayPadding;
+    position: absolute;
+    top:$overlayTopPosition;
+    width: $overlayWidth;
+    .overlayDuration {
+      background: $overlayDurationBkgColor;
+      color: $overlayDurationColor;
+      display: $overlayDurationDisplay;
+      font-size: $overlayDurationFontSize;
+      margin: $overlayDurationMargin;
+      padding: $overlayDurationPadding;
+    }
+    .overlayTitle {
+      background: $overlayTitleBkgColor;
+      color: $overlayTitleFontColor;
+      font-size: $overlayTitleFontSize;
+      height: $overlayTitlePanelHeight;
+      padding: $overlayTitlePadding;
+      text-align: $overlayTitleTextAlign;
+      width: $overlayTitleWidth;
+    }
+    .overlayCTA {
+      background: $overlayCTABkgColor;
+      display: $overlayCTADisplay;
+      color: $overlayCTAFontColor;
+      font-size: $overlayCTAFontSize;
+      height:$overlayCTAHeight;
+      margin: $overlayCTAMargin;
+      padding: $overlayCTAPadding;
+      text-align: $overlayCTATextAlign;
+      text-transform: $overlayCTATextTransform;
+      width:$overlayCTAWidth;
+    }
+  }
+}
+
+.playerContainer {
+  background: $playerContainerBkgColor;
+  display: block;
+  height: $playerContainerHeight;
+  margin:0 auto;
+  padding: $playerContainerPadding;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  width: $playerContainerWidth;
+
+  .video-js-multi  {
+    height: $videoPlayerHeight;
+    margin: 0 auto;
+    position: relative;
+    width: $videoPlayerWidth;
+  }
+
+  .bc-player-353614f4-e33f-409d-a3ca-8cfc743772bb_default.vjs-mouse .vjs-big-play-button {
+    width: 106px;
+    height: 105px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -50px 0 0 -50px;
+    border-radius: 50px;
+  }
+}
+
+.show {
+  visibility: visible !important;
+}
+
+
+.playlist-wrapper {
+  background: $playlistContainerBkgColor;
+  margin:0 auto;
+  padding: $playlistContainerPadding;
+  visibility: hidden;
+  width: $playlistContainerWidth;
+
+  .vjs-mouse.vjs-playlist{
+    background: none;
+    margin:0 auto;
+    padding:0;
+
+    .vjs-playlist-item{
+      float: left;
+      height: auto;
+      margin-right: 10px;
+
+      &.vjs-selected{
+        .vjs-playlist-thumbnail{
+          border: $playlistItemSelectedThumbnailBorder;
+          position: relative;
+
+          &:before{
+            background: $playlistThumbnailOverlayBkg;
+            content: $playlistThumbnailOverlayContent;
+            display: $playlistThumbnailOverlayDisplay;
+            height: $playlistThumbnailOverlayHeight;
+            top: $playlistThumbnailOverlayTopPosition;
+            position: $playlistThumbnailOverlayPosition;
+            border-radius: $playlistThumbnailOverlayBorderRadius;
+            width: $playlistThumbnailOverlayWidth;
+            left: $playlistThumbnailOverlayLeftPosition;
+          }
+          &:after{
+            background: $nowPlayingBkgColor;
+            border: $nowPlayingBorder;
+            border-radius: $nowPlayingBorderRadius;
+            content: $nowPlayingContent;
+            font-size: $nowPlayingFontSize;
+            height: $nowPlayingHeight;
+            line-height: $nowPlayingLineHeight;
+            left: $nowPlayingLeftPosition;
+            margin:$nowPlayingMargin;
+            position: $nowPlayingPosition;
+            text-align: $nowPlayingTextAlign;
+            text-transform: $nowPlayingTextTransform;
+            top: $nowPlayingTopPosition;
+            width: $nowPlayingWidth;
+          }
+        }
+      }
+
+      &:hover{
+        &.vjs-selected{
+          .vjs-playlist-thumbnail{
+            border: $playlistItemSelectedThumbnailBorder;
+            position: relative;
+
+            &:before{
+              background: $playlistThumbnailOverlayBkg;
+              content: $playlistThumbnailOverlayContent;
+              display: $playlistThumbnailOverlayDisplay;
+              height: $playlistThumbnailOverlayHeight;
+              top: $playlistThumbnailOverlayTopPosition;
+              position: $playlistThumbnailOverlayPosition;
+              border-radius: $playlistThumbnailOverlayBorderRadius;
+              width: $playlistThumbnailOverlayWidth;
+              left: $playlistThumbnailOverlayLeftPosition;
+            }
+            &:after{
+              background: $nowPlayingBkgColor;
+              border: $nowPlayingBorder;
+              border-radius: $nowPlayingBorderRadius;
+              content: $nowPlayingContent;
+              font-size: $nowPlayingFontSize;
+              height: $nowPlayingHeight;
+              line-height: $nowPlayingLineHeight;
+              left: $nowPlayingLeftPosition;
+              margin:$nowPlayingMargin;
+              position: $nowPlayingPosition;
+              text-align: $nowPlayingTextAlign;
+              text-transform: $nowPlayingTextTransform;
+              top: $nowPlayingTopPosition;
+              width: $nowPlayingWidth;
+            }
+          }
+        }
+        .vjs-playlist-thumbnail{
+          border: $playlistItemSelectedThumbnailBorder;
+          float: none;
+          height: $playlistItemThumbnailHeight;
+          margin: $playlistItemThumbnailMargin;
+          position: relative;
+          width: $playlistItemThumbnailWidth;
+
+          &:before{
+            background: $playlistThumbnailOverlayBkg;
+            content: $playlistThumbnailOverlayContent;
+            display: $playlistThumbnailOverlayDisplay;
+            height: $playlistThumbnailOverlayHeight;
+            top: $playlistThumbnailOverlayTopPosition;
+            position: $playlistThumbnailOverlayPosition;
+            border-radius: $playlistThumbnailOverlayBorderRadius;
+            width: $playlistThumbnailOverlayWidth;
+            left: $playlistThumbnailOverlayLeftPosition;
+          }
+
+          &:after{
+            background:$playlistThumbnailPlayIconBkg;
+            content: $playlistThumbnailPlayIconContent;
+            border-radius: $playlistThumbnailPlayIconBorderRadius;
+            font-family: $playlistThumbnailPlayIconFont;
+            font-size: $playlistThumbnailPlayIconFontSize;
+            height: $playlistThumbnailPlayIconHeight;
+            margin: $playlistThumbnailPlayIconMargin;
+            left: $playlistThumbnailPlayIconLeft;
+            line-height: $playlistThumbnailPlayIconLineHeight;
+            position: $playlistThumbnailPlayIconPosition;
+            text-align: $playlistThumbnailPlayIconTextAlign;
+            top: $playlistThumbnailPlayIconTopPosition;
+            width: $playlistThumbnailPlayIconWidth;
+          }
+        }
+      }
+    }
+    .vjs-playlist-thumbnail{
+      border: $playlistItemThumbnailBorder;
+      float: none;
+      height: $playlistItemThumbnailHeight;
+      margin: $playlistItemThumbnailMargin;
+      position: relative;
+      width: $playlistItemThumbnailWidth;
+
+      &:before{
+        background: $playlistThumbnailOverlayBkg;
+        content: $playlistThumbnailOverlayContent;
+        display: $playlistThumbnailOverlayDisplay;
+        height: $playlistThumbnailOverlayHeight;
+        top: $playlistThumbnailOverlayTopPosition;
+        position: $playlistThumbnailOverlayPosition;
+        border-radius: $playlistThumbnailOverlayBorderRadius;
+        width: $playlistThumbnailOverlayWidth;
+        left: $playlistThumbnailOverlayLeftPosition;
+      }
+
+      &:after{
+        background:$playlistThumbnailPlayIconBkg;
+        content: $playlistThumbnailPlayIconContent;
+        border-radius: $playlistThumbnailPlayIconBorderRadius;
+        font-family: $playlistThumbnailPlayIconFont;
+        font-size: $playlistThumbnailPlayIconFontSize;
+        height: $playlistThumbnailPlayIconHeight;
+        margin: $playlistThumbnailPlayIconMargin;
+        left: $playlistThumbnailPlayIconLeft;
+        line-height: $playlistThumbnailPlayIconLineHeight;
+        position: $playlistThumbnailPlayIconPosition;
+        text-align: $playlistThumbnailPlayIconTextAlign;
+        top: $playlistThumbnailPlayIconTopPosition;
+        width: $playlistThumbnailPlayIconWidth;
+      }
+    }
+    .vjs-playlist-duration{
+      bottom: $playlistDurationBottomPosition;
+      display: block;
+      left: $playlistDurationLeftPosition;
+      right: $playlistDurationRightPosition;
+      top: $playlistDurationTopPosition;
+    }
+    cite{
+      display: none;
+    }
+    .vjs-playlist-description{
+      color: $playlistItemDescriptionColor;
+      font-size: $playlistItemDescriptionFontSize;
+      height: $playlistItemDescriptionHeight;
+      line-height: $playlistItemDescriptionLineHeight;
+      margin: $playlistItemDescriptionMargin;
+      overflow: $playlistItemDescriptionOverflow;
+      padding: $playlistItemDescriptionPadding;
+      position: $playlistItemDescriptionPosition;
+      text-overflow: inherit;
+      top: $playlistItemDescriptionTopPosition;
+      white-space: normal;
+    }
+  }
+}
+
+.playlistInfo{
+  background:$playlistInfoBkgColor;
+  display: $playlistInfoDisplay;
+  height:$playlistInfoHeight;
+  margin: $playlistInfoMargin;
+  position: $playlistInfoPosition;
+  visibility: hidden;
+  width: $playlistInfoWidth;
+  p{
+    line-height: $playlistInfoLineHeight;
+    text-align: $playlistInfoTextAlign;
+  }
+  span#slider-prev{
+    border-right: $playlistPrevControlBorder;
+    display: $playlistControlsDisplay;
+    height: $playlistControlHeight;
+    left: $playlistPrevControlLeftPosition;
+    padding: $playlistControlsPadding;
+    position: $playlistControlsPosition;
+    width: $playlistControlWidth;
+
+    a{
+      background: $playlistControlBkgColor;
+      color:$playlistControlsColor;
+      display: block;
+      width: $playlistControlWidth;
+      &.disabled{
+        background: $playlistControlsDisabledBkgColor;
+        color:$playlistControlsDisabledColor;
+      }
+    }
+  }
+  span#slider-next{
+    border-left: $playlistNextControlBorder;
+    display: $playlistControlsDisplay;
+    height: $playlistControlHeight;
+    padding: $playlistControlsPadding;
+    position: $playlistControlsPosition;
+    right: $playlistNextControlRightPosition;
+    width: $playlistControlWidth;
+    a{
+      background: $playlistControlBkgColor;
+      color:$playlistControlsColor;
+      display: block;
+      width: $playlistControlWidth;
+      &.disabled{
+        background: $playlistControlsDisabledBkgColor;
+        color:$playlistControlsDisabledColor;
+      }
+    }
+  }
+  span.videoInfo{
+    color:$playlistItemCountFontColor;
+    display: $playlistItemCountDisplay;
+    padding:$playlistItemCountPadding;
+    text-align: $playlistItemCountTextAlignment;
+    text-transform: $playlistItemCountTextTransform;
+  }
+}
+
+@media(min-width:1280px){
+  #heroPlayerComponent{
+    position: relative;
+    margin:0 auto;
+    width: $heroPlayerWidth;
+  }
+  #imageOverlay {
+    height:$heroImageHeight1280;
+    width: $heroImageWidth1280;
+    #overlay {
+      left:$overlayLeftPosition1280;
+      padding:$overlayPadding1280;
+      top:$overlayTopPosition1280;
+      width: $overlayWidth1280;
+      .overlayDuration {
+        background: $overlayDurationBkgColor1280;
+        display: $overlayDurationDisplay1280;
+        font-size: $overlayDurationFontSize1280;
+        padding: $overlayDurationPadding1280;
+      }
+      .overlayTitle {
+        background: $overlayTitleBkgColor1280;
+        font-size: $overlayTitleFontSize1280;
+        height: $overlayTitlePanelHeight1280;
+      }
+      .overlayCTA {
+        font-size: $overlayCTAFontSize1280;
+        height:$overlayCTAHeight1280;
+        padding: $overlayCTAPadding1280;
+      }
+    }
+  }
+
+  .playerContainer {
+    // background: $playerContainerBkgColor1280;
+    display: block;
+    height: $playerContainerHeight1280;
+    left: 0;
+    margin:0 auto;
+    padding: $playerContainerPadding1280;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    width: $playerContainerWidth1280;
+
+    .video-js-multi  {
+      height: $videoPlayerHeight1280;
+      margin: 0 auto;
+      position: relative;
+      width: $videoPlayerWidth1280;
+    }
+
+    .bc-player-353614f4-e33f-409d-a3ca-8cfc743772bb_default.vjs-mouse .vjs-big-play-button {
+      width: 106px;
+      height: 105px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      margin: -50px 0 0 -50px;
+      border-radius: 50px;
+    }
+  }
+
+  .show {
+    visibility: visible !important;
+  }
+
+
+  .playlist-wrapper {
+    // background: $playlistContainerBkgColor1280;
+    margin:0 auto;
+    padding: $playlistContainerPadding1280;
+    visibility: hidden;
+    width: $playlistContainerWidth1280;
+
+    .vjs-mouse.vjs-playlist{
+      background: none;
+      margin:0 auto;
+      padding:0;
+
+      .vjs-playlist-item{
+        float: left;
+        height: auto;
+        // margin-right: 30px;
+
+        &.vjs-selected{
+          .vjs-playlist-thumbnail{
+            border: $playlistItemSelectedThumbnailBorder1280;
+            position: relative;
+
+            &:before{
+              background: $playlistThumbnailOverlayBkg1280;
+              content: $playlistThumbnailOverlayContent1280;
+              display: $playlistThumbnailOverlayDisplay1280;
+              height: $playlistThumbnailOverlayHeight1280;
+              top: $playlistThumbnailOverlayTopPosition1280;
+              position: $playlistThumbnailOverlayPosition1280;
+              border-radius: $playlistThumbnailOverlayBorderRadius1280;
+              width: $playlistThumbnailOverlayWidth1280;
+              left: $playlistThumbnailOverlayLeftPosition1280;
+            }
+            &:after{
+              background: $nowPlayingBkgColor1280;
+              border: $nowPlayingBorder1280;
+              border-radius: $nowPlayingBorderRadius1280;
+              content: $nowPlayingContent1280;
+              font-size: $nowPlayingFontSize1280;
+              height: $nowPlayingHeight1280;
+              line-height: $nowPlayingLineHeight1280;
+              left: $nowPlayingLeftPosition1280;
+              margin:$nowPlayingMargin1280;
+              position: $nowPlayingPosition1280;
+              text-align: $nowPlayingTextAlign1280;
+              text-transform: $nowPlayingTextTransform1280;
+              top: $nowPlayingTopPosition1280;
+              width: $nowPlayingWidth1280;
+            }
+          }
+        }
+
+        &:hover{
+          &.vjs-selected{
+            .vjs-playlist-thumbnail{
+              border: $playlistItemSelectedThumbnailBorder1280;
+              position: relative;
+
+              &:before{
+                background: $playlistThumbnailOverlayBkg1280;
+                content: $playlistThumbnailOverlayContent1280;
+                display: $playlistThumbnailOverlayDisplay1280;
+                height: $playlistThumbnailOverlayHeight1280;
+                top: $playlistThumbnailOverlayTopPosition1280;
+                position: $playlistThumbnailOverlayPosition1280;
+                border-radius: $playlistThumbnailOverlayBorderRadius1280;
+                width: $playlistThumbnailOverlayWidth1280;
+                left: $playlistThumbnailOverlayLeftPosition1280;
+              }
+              &:after{
+                background: $nowPlayingBkgColor1280;
+                border: $nowPlayingBorder1280;
+                border-radius: $nowPlayingBorderRadius1280;
+                content: $nowPlayingContent1280;
+                font-size: $nowPlayingFontSize1280;
+                height: $nowPlayingHeight1280;
+                line-height: $nowPlayingLineHeight1280;
+                left: $nowPlayingLeftPosition1280;
+                margin:$nowPlayingMargin1280;
+                position: $nowPlayingPosition1280;
+                text-align: $nowPlayingTextAlign1280;
+                text-transform: $nowPlayingTextTransform1280;
+                top: $nowPlayingTopPosition1280;
+                width: $nowPlayingWidth1280;
+              }
+            }
+          }
+          .vjs-playlist-thumbnail{
+            border: $playlistItemSelectedThumbnailBorder1280;
+            float: none;
+            height: $playlistItemThumbnailHeight1280;
+            margin: $playlistItemThumbnailMargin1280;
+            position: relative;
+            width: $playlistItemThumbnailWidth1280;
+
+            &:before{
+              background: $playlistThumbnailOverlayBkg1280;
+              content: $playlistThumbnailOverlayContent1280;
+              display: $playlistThumbnailOverlayDisplay1280;
+              height: $playlistThumbnailOverlayHeight1280;
+              top: $playlistThumbnailOverlayTopPosition1280;
+              position: $playlistThumbnailOverlayPosition1280;
+              border-radius: $playlistThumbnailOverlayBorderRadius1280;
+              width: $playlistThumbnailOverlayWidth1280;
+              left: $playlistThumbnailOverlayLeftPosition1280;
+            }
+
+            &:after{
+              background:$playlistThumbnailPlayIconBkg1280;
+              content: $playlistThumbnailPlayIconContent1280;
+              border-radius: $playlistThumbnailPlayIconBorderRadius1280;
+              font-family: $playlistThumbnailPlayIconFont1280;
+              font-size: $playlistThumbnailPlayIconFontSize1280;
+              height: $playlistThumbnailPlayIconHeight1280;
+              margin: $playlistThumbnailPlayIconMargin1280;
+              left: $playlistThumbnailPlayIconLeft1280;
+              line-height: $playlistThumbnailPlayIconLineHeight1280;
+              position: $playlistThumbnailPlayIconPosition1280;
+              text-align: $playlistThumbnailPlayIconTextAlign1280;
+              top: $playlistThumbnailPlayIconTopPosition1280;
+              width: $playlistThumbnailPlayIconWidth1280;
+            }
+          }
+        }
+      }
+      .vjs-playlist-thumbnail{
+        border: $playlistItemThumbnailBorder1280;
+        float: none;
+        height: $playlistItemThumbnailHeight1280;
+        margin: $playlistItemThumbnailMargin1280;
+        position: relative;
+        width: $playlistItemThumbnailWidth1280;
+
+        &:before{
+          background: $playlistThumbnailOverlayBkg1280;
+          content: $playlistThumbnailOverlayContent1280;
+          display: $playlistThumbnailOverlayDisplay1280;
+          height: $playlistThumbnailOverlayHeight1280;
+          top: $playlistThumbnailOverlayTopPosition1280;
+          position: $playlistThumbnailOverlayPosition1280;
+          border-radius: $playlistThumbnailOverlayBorderRadius1280;
+          width: $playlistThumbnailOverlayWidth1280;
+          left: $playlistThumbnailOverlayLeftPosition1280;
+        }
+
+        &:after{
+          background:$playlistThumbnailPlayIconBkg1280;
+          content: $playlistThumbnailPlayIconContent1280;
+          border-radius: $playlistThumbnailPlayIconBorderRadius1280;
+          font-family: $playlistThumbnailPlayIconFont1280;
+          font-size: $playlistThumbnailPlayIconFontSize1280;
+          height: $playlistThumbnailPlayIconHeight1280;
+          margin: $playlistThumbnailPlayIconMargin1280;
+          left: $playlistThumbnailPlayIconLeft1280;
+          line-height: $playlistThumbnailPlayIconLineHeight1280;
+          position: $playlistThumbnailPlayIconPosition1280;
+          text-align: $playlistThumbnailPlayIconTextAlign1280;
+          top: $playlistThumbnailPlayIconTopPosition1280;
+          width: $playlistThumbnailPlayIconWidth1280;
+        }
+      }
+      .vjs-playlist-duration{
+        bottom: $playlistDurationBottomPosition1280;
+        display: block;
+        left: $playlistDurationLeftPosition1280;
+        right: $playlistDurationRightPosition1280;
+        top: $playlistDurationTopPosition1280;
+      }
+      cite{
+        display: none;
+      }
+      .vjs-playlist-description{
+        color: $playlistItemDescriptionColor1280;
+        font-size: $playlistItemDescriptionFontSize1280;
+        height: $playlistItemDescriptionHeight1280;
+        line-height: $playlistItemDescriptionLineHeight1280;
+        margin: $playlistItemDescriptionMargin1280;
+        overflow: $playlistItemDescriptionOverflow1280;
+        padding: $playlistItemDescriptionPadding1280;
+        position: $playlistItemDescriptionPosition1280;
+        text-overflow: inherit;
+        top: $playlistItemDescriptionTopPosition1280;
+        white-space: normal;
+      }
+    }
+  }
+
+  .playlistInfo{
+    background:$playlistInfoBkgColor1280;
+    display: $playlistInfoDisplay1280;
+    height:$playlistInfoHeight1280;
+    margin: $playlistInfoMargin1280;
+    position: $playlistInfoPosition1280;
+    visibility: hidden;
+    width: $playlistInfoWidth1280;
+    p{
+      line-height: $playlistInfoLineHeight1280;
+      text-align: $playlistInfoTextAlign1280;
+    }
+    span#slider-prev{
+      border-right: $playlistPrevControlBorder1280;
+      display: $playlistControlsDisplay1280;
+      height: $playlistControlHeight1280;
+      left: $playlistPrevControlLeftPosition1280;
+      padding: $playlistControlsPadding1280;
+      position: $playlistControlsPosition1280;
+      width: $playlistControlWidth1280;
+
+      a{
+        background: $playlistControlBkgColor1280;
+        color:$playlistControlsColor1280;
+        display: block;
+        width: $playlistControlWidth1280;
+        &.disabled{
+          background: $playlistControlsDisabledBkgColor1280;
+          color:$playlistControlsDisabledColor1280;
+        }
+      }
+    }
+    span#slider-next{
+      border-left: $playlistNextControlBorder1280;
+      display: $playlistControlsDisplay1280;
+      height: $playlistControlHeight1280;
+      padding: $playlistControlsPadding1280;
+      position: $playlistControlsPosition1280;
+      right: $playlistNextControlRightPosition1280;
+      width: $playlistControlWidth1280;
+      a{
+        background: $playlistControlBkgColor1280;
+        color:$playlistControlsColor1280;
+        display: block;
+        width: $playlistControlWidth1280;
+        &.disabled{
+          background: $playlistControlsDisabledBkgColor1280;
+          color:$playlistControlsDisabledColor1280;
+        }
+      }
+    }
+    span.videoInfo{
+      color:$playlistItemCountFontColor1280;
+      display: $playlistItemCountDisplay1280;
+      padding:$playlistItemCountPadding1280;
+      text-align: $playlistItemCountTextAlignment1280;
+      text-transform: $playlistItemCountTextTransform1280;
+    }
+  }
+}
+
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(../images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+  display: none;
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(../images/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url(../images/controls.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}

@@ -1,0 +1,28 @@
+html
+  head
+    meta(charset="UTF-8")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+    link(rel="stylesheet", href="css/font-awesome.css")
+    link(rel="stylesheet", href="css/style.css")
+  body
+    #micrositeBody
+      #heroPlayerComponent
+        a#imageOverlay
+          #overlay
+            p.overlayDuration
+              i.fa.fa-video-camera
+            .overlayTitle
+            p.overlayCTA Watch Now
+        .playerContainer
+          script(type="text/javascript").
+            var playlistID = [4234547961001];
+          video#video-multi-test.video-js-multi(data-account="1660622130", data-player="353614f4-e33f-409d-a3ca-8cfc743772bb", data-embed="default", controls="")
+        .playlist-wrapper
+          ol.vjs-playlist
+        .playlistInfo
+          p
+            span#slider-prev
+            span.videoInfo
+            span#slider-next
+        script(src="http://players.brightcove.net/1660622130/353614f4-e33f-409d-a3ca-8cfc743772bb_default/index.min.js")
+        script(type="text/javascript", src="javascript/script.js")

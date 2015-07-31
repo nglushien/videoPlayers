@@ -1,0 +1,281 @@
+// Layout
+$micrositeBodyWidth: 300px;
+$micrositeBodyWidth640: 640px;
+$micrositeBodyWidth960: 960px;
+$micrositeBodyWidth1280: 1280px;
+
+// Client Brand Colors
+$clientPrimaryBrandColor: #fff;
+$clientSecondaryBrandColor: #000;
+
+// Base Styles
+$heroPlayerWidth: 300px;
+
+// heroImage and Overlay
+$heroImageBkg: url("http://blog.corbis.com/wp-content/uploads/2015/01/42-33288847.jpg")no-repeat 0 0;
+$overlayBkgColor: linear-gradient(to right, rgba(255,255,255,.75) 0%, rgba(255,255,255,.75) 50%, rgba(255,255,255,0) 100%);
+$heroImageHeight: 200px;
+$heroImageWidth: 300px;
+$overlayLeftPosition: 0;
+$overlayTopPosition: 0;
+$overlayPadding:0;
+$overlayWidth: 300px;
+$overlayDurationColor: #fff;
+$overlayDurationDisplay: none;
+$overlayDurationBkgColor: rgba(0, 0, 0, 0.5);
+$overlayDurationFontSize: 20px;
+$overlayDurationMargin: 0;
+$overlayDurationPadding: 15px;
+$overlayTitleBkgColor: rgba(0, 0, 0, 0.5);
+$overlayTitleFontColor: #333;
+$overlayTitleFontSize: 22px;
+$overlayTitlePanelHeight: 165px;
+$overlayTitlePadding: 20px 20px 0;
+$overlayTitleTextAlign: left;
+$overlayTitleWidth: 80%;
+$overlayCTABkgColor: $clientSecondaryBrandColor;
+$overlayCTADisplay: inline-block;
+$overlayCTAFontColor: #fff;
+$overlayCTAFontSize: 16px;
+$overlayCTAHeight:35px;
+$overlayCTAMargin: 20px;
+$overlayCTAPadding: 9px 15px;
+$overlayCTATextAlign: center;
+$overlayCTATextTransform: uppercase;
+$overlayCTAWidth:175px;
+
+// Video Player and Container
+$playerContainerBkgColor: rgba(0,0,0,.7);
+$playerContainerHeight: 165px;
+$playerContainerPadding: 0px;
+$playerContainerWidth: 300px;
+
+$videoPlayerWidth: 300px;
+$videoPlayerHeight: ($videoPlayerWidth/16)*9;
+
+// Playlist Items and Container Controls
+$playlistContainerBkgColor: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 100%);;
+$playlistContainerPadding: 26px 10px;
+$playlistContainerWidth: 300px;
+
+$playlistItemWidth: 135px;
+$playlistItemThumbnailBorder: 1px solid #fff;
+$playlistItemSelectedThumbnailBorder: 1px solid #fff;
+$playlistItemThumbnailHeight: 80px;
+$playlistItemThumbnailMargin: 0 0 20px;
+$playlistItemThumbnailWidth: 135px;
+
+$playlistThumbnailOverlayBkg: rgba(0, 0, 0, 0.7);
+$playlistThumbnailOverlayContent: ' ';
+$playlistThumbnailOverlayDisplay: block;
+$playlistThumbnailOverlayHeight: 80px;
+$playlistThumbnailOverlayTopPosition: 0;
+$playlistThumbnailOverlayPosition: absolute;
+$playlistThumbnailOverlayBorderRadius: 0;
+$playlistThumbnailOverlayWidth: 135px;
+$playlistThumbnailOverlayLeftPosition: 0;
+
+$nowPlayingBkgColor: rgba(0,0,0,.7);
+$nowPlayingBorder:none;
+$nowPlayingBorderRadius: 0;
+$nowPlayingContent: "Now Playing";
+$nowPlayingFontSize: 12px;
+$nowPlayingHeight: 25px;
+$nowPlayingLineHeight: 25px;
+$nowPlayingLeftPosition:10px;
+$nowPlayingMargin:0;
+$nowPlayingPosition: absolute;
+$nowPlayingTextAlign: center;
+$nowPlayingTextTransform: uppercase;
+$nowPlayingTopPosition:50%;
+$nowPlayingWidth: 115px;
+
+$playlistThumbnailPlayIconBkg: rgba(0,0,0,.6);
+$playlistThumbnailPlayIconContent: '\e001';
+$playlistThumbnailPlayIconBorderRadius: 50px;
+$playlistThumbnailPlayIconFont: VideoJS;
+$playlistThumbnailPlayIconFontSize: 20px;
+$playlistThumbnailPlayIconHeight: 50px;
+$playlistThumbnailPlayIconMargin: -25px 0 0 -25px;
+$playlistThumbnailPlayIconLeft: 50%;
+$playlistThumbnailPlayIconLineHeight: 50px;
+$playlistThumbnailPlayIconPosition: absolute;
+$playlistThumbnailPlayIconTextAlign: center;
+$playlistThumbnailPlayIconTopPosition: 50%;
+$playlistThumbnailPlayIconWidth: 50px;
+
+$playlistItemDescriptionColor: #333;
+$playlistItemDescriptionFontSize: 16px;
+$playlistItemDescriptionHeight: auto;
+$playlistItemDescriptionLineHeight: normal;
+$playlistItemDescriptionMargin: 0 0 30px;
+$playlistItemDescriptionOverflow: visible;
+$playlistItemDescriptionPadding: 0;
+$playlistItemDescriptionPosition: relative;
+$playlistItemDescriptionTopPosition: 0;
+
+$playlistDurationBottomPosition: 0;
+$playlistDurationLeftPosition: 0;
+$playlistDurationRightPosition: inherit;
+$playlistDurationTopPosition: inherit;
+
+// Video Count, Controls and Container
+$playlistInfoBkgColor: #ddd;
+$playlistInfoDisplay: block;
+$playlistInfoHeight: auto;
+$playlistInfoLineHeight: 1;
+$playlistInfoMargin: 0 auto;
+$playlistInfoPosition: relative;
+$playlistInfoTextAlign: center;
+$playlistInfoWidth: 300px;
+
+$playlistControlBkgColor: none;
+$playlistControlsDisplay: inline-block;
+$playlistNextControlBorder: 1px solid #333;
+$playlistNextControlRightPosition: 0px;
+$playlistPrevControlBorder: 1px solid #333;
+$playlistPrevControlLeftPosition: 0px;
+$playlistControlsColor: $clientPrimaryBrandColor;
+$playlistControlsDisabledBkgColor: none;
+$playlistControlsDisabledColor: #666;
+$playlistControlHeight: 22px;
+$playlistControlWidth: 30px;
+$playlistControlsPadding: 3px 0 0;
+$playlistControlsPosition: relative;
+
+$playlistItemCountFontColor: #333;
+$playlistItemCountDisplay: inline-block;
+$playlistItemCountPadding: 10px 30px;
+$playlistItemCountTextAlignment: center;
+$playlistItemCountTextTransform: uppercase;
+
+// @640
+
+// @960
+
+// @1280
+
+// heroImage and Overlay
+$heroPlayerWidth: 1280px;
+
+$heroImageBkg: url("http://blog.corbis.com/wp-content/uploads/2015/01/42-33288847.jpg")no-repeat 0 -300px;
+$heroImageHeight1280: 550px;
+$heroImageWidth1280: 1280px;
+$overlayLeftPosition1280: 135px;
+$overlayTopPosition1280: 120px;
+$overlayPadding1280:0;
+$overlayWidth1280: 1000px;
+$overlayDurationDisplay1280: none;
+$overlayDurationBkgColor1280: rgba(0, 0, 0, 0.5);
+$overlayDurationFontSize1280: 20px;
+$overlayDurationPadding1280: 15px;
+$overlayTitleBkgColor1280: none;
+$overlayTitleFontSize1280: 32px;
+$overlayTitlePanelHeight1280: auto;
+$overlayTitlePadding1280: 20px;
+$overlayCTAFontSize1280: 20px;
+$overlayCTAHeight1280:50px;
+$overlayCTAPadding1280: 15px;
+
+// Video Player and Container
+$playerContainerHeight1280: 550px;
+$playerContainerPadding1280: 10px 20px;
+$playerContainerWidth1280: 1280px;
+
+$videoPlayerWidth1280: 920px;
+$videoPlayerHeight1280: ($videoPlayerWidth1280/16)*9;
+
+// Playlist Items and Container Controls
+$playlistContainerPadding1280: 26px 10px;
+$playlistContainerWidth1280: 1280px;
+
+$playlistItemWidth1280: 260px;
+$playlistItemThumbnailBorder1280: $playlistItemThumbnailBorder;
+$playlistItemSelectedThumbnailBorder1280: $playlistItemSelectedThumbnailBorder;
+$playlistItemThumbnailHeight1280: 145px;
+$playlistItemThumbnailMargin1280: 0 0 20px;
+$playlistItemThumbnailWidth1280: 260px;
+
+$playlistThumbnailOverlayBkg1280: rgba(0, 0, 0, 0.7);
+$playlistThumbnailOverlayContent1280: ' ';
+$playlistThumbnailOverlayDisplay1280: $playlistThumbnailOverlayDisplay;
+$playlistThumbnailOverlayHeight1280: 143px;
+$playlistThumbnailOverlayTopPosition1280: 0;
+$playlistThumbnailOverlayPosition1280: absolute;
+$playlistThumbnailOverlayBorderRadius1280: 0;
+$playlistThumbnailOverlayWidth1280: 258px;
+$playlistThumbnailOverlayLeftPosition1280: 0;
+
+$nowPlayingBkgColor1280: rgba(0,0,0,.7);
+$nowPlayingBorder1280:1px solid #fff;
+$nowPlayingBorderRadius1280: 0;
+$nowPlayingContent1280: "Now Playing";
+$nowPlayingFontSize1280: 16px;
+$nowPlayingHeight1280: 45px;
+$nowPlayingLineHeight1280: 45px;
+$nowPlayingLeftPosition1280:50%;
+$nowPlayingMargin1280: -22px 0 0 -75px;
+$nowPlayingPosition1280: absolute;
+$nowPlayingTextAlign1280: center;
+$nowPlayingTextTransform1280: uppercase;
+$nowPlayingTopPosition1280:50%;
+$nowPlayingWidth1280: 150px;
+
+$playlistThumbnailPlayIconBkg1280: rgba(0,0,0,.6);
+$playlistThumbnailPlayIconContent1280: '\e001';
+$playlistThumbnailPlayIconBorderRadius1280: 50px;
+$playlistThumbnailPlayIconFont1280: VideoJS;
+$playlistThumbnailPlayIconFontSize1280: 20px;
+$playlistThumbnailPlayIconHeight1280: 50px;
+$playlistThumbnailPlayIconMargin1280: -25px 0 0 -25px;
+$playlistThumbnailPlayIconLeft1280: 50%;
+$playlistThumbnailPlayIconLineHeight1280: 50px;
+$playlistThumbnailPlayIconPosition1280: absolute;
+$playlistThumbnailPlayIconTextAlign1280: center;
+$playlistThumbnailPlayIconTopPosition1280: 50%;
+$playlistThumbnailPlayIconWidth1280: 50px;
+
+$playlistItemDescriptionColor1280: #fff;
+$playlistItemDescriptionFontSize1280: 14px;
+$playlistItemDescriptionHeight1280: 18px;
+$playlistItemDescriptionLineHeight1280: normal;
+$playlistItemDescriptionMargin1280: 0;
+$playlistItemDescriptionOverflow1280: visible;
+$playlistItemDescriptionPadding1280: 5px 10px;
+$playlistItemDescriptionPosition1280: absolute;
+$playlistItemDescriptionTopPosition1280: 0;
+
+$playlistDurationBottomPosition1280: 21px;
+$playlistDurationLeftPosition1280: inherit;
+$playlistDurationRightPosition1280: 1px;
+$playlistDurationTopPosition1280: inherit;
+
+// Video Count, Controls and Container
+$playlistInfoBkgColor1280: #000;
+$playlistInfoDisplay1280: block;
+$playlistInfoHeight1280: auto;
+$playlistInfoLineHeight1280: 1;
+$playlistInfoMargin1280: 0 auto;
+$playlistInfoPosition1280: relative;
+$playlistInfoTextAlign1280: center;
+$playlistInfoWidth1280: 1280px;
+
+$playlistControlBkgColor1280: none;
+$playlistControlsDisplay1280: inline-block;
+$playlistNextControlBorder1280: 1px solid #fff;
+$playlistNextControlRightPosition1280: 0px;
+$playlistPrevControlBorder1280: 1px solid #fff;
+$playlistPrevControlLeftPosition1280: 0px;
+$playlistControlsColor1280: $clientPrimaryBrandColor;
+$playlistControlsDisabledBkgColor1280: none;
+$playlistControlsDisabledColor1280: #666;
+$playlistControlHeight1280: 22px;
+$playlistControlWidth1280: 30px;
+$playlistControlsPadding1280: 3px 0 0;
+$playlistControlsPosition1280: relative;
+
+$playlistItemCountFontColor1280: #fff;
+$playlistItemCountDisplay1280: inline-block;
+$playlistItemCountPadding1280: 10px 30px;
+$playlistItemCountTextAlignment1280: center;
+$playlistItemCountTextTransform1280: uppercase;

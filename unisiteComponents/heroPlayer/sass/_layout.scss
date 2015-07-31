@@ -1,0 +1,25 @@
+#micrositeBody{
+  margin:0 auto;
+  width: $micrositeBodyWidth;
+}
+
+@media(min-width:640px){
+  #micrositeBody{
+    margin:0 auto;
+    width: $micrositeBodyWidth640;
+  }
+}
+
+@media(min-width:960px){
+  #micrositeBody{
+    margin:0 auto;
+    width: $micrositeBodyWidth960;
+  }
+}
+
+@media(min-width:1280px){
+  #micrositeBody{
+    margin:0 auto;
+    width: $micrositeBodyWidth1280;
+  }
+}
